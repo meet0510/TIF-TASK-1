@@ -30,9 +30,21 @@ export default function Landing() {
           Get in Touch
         </Button>
       </Box>
-      <Box pl="100px">
-        <Image src={Truck} pt="33px" display={{ base: "none", xl: "block" }} />
-        <Box pt={{ base: "950px", xl: "111px" }} >
+      <Box
+        pl={{ base: "0px", xl: "110px" }}
+        pt={{ base: "500px", md: "850px", xl: "0px" }}
+        display="flex"
+        flexDir="column"
+        alignItems={{ base: "center", xl: "baseline" }}
+      >
+        <Image
+          height="116px"
+          width="130px"
+          src={Truck}
+          pt="33px"
+          display={{ base: "none", xl: "block" }}
+        />
+        <Box pt={{ base: "64px", xl: "111px" }}>
           <Text
             as="span"
             color="#0E2368"

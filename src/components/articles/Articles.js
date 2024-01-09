@@ -22,11 +22,13 @@ export default function Articles() {
   };
 
   return (
-    <Box mt="158px" ml="108px" mb="65px">
+    <Box mt="158px" mx={{ base: "20px", lg: "108px" }} mb="65px">
       <Text
+        display="flex"
+        justifyContent={{ base: "center", lg: "normal" }}
         as="span"
         color="#0E2368"
-        fontSize="56px"
+        fontSize={{ base: "28px", lg: "56px" }}
         fontFamily="Source Sans Pro"
         fontWeight={600}
         lineHeight="42px"
@@ -35,11 +37,11 @@ export default function Articles() {
       >
         Latest Articles
       </Text>
-      <Box display="flex" flexDir="raw">
+      <Box display="flex" flexDir="row" flexWrap="wrap">
         {index === 1 && articlesSet1.map((article) => <Article {...article} />)}
         {index === 2 && articlesSet2.map((article) => <Article {...article} />)}
       </Box>
-      <Box display="flex" flexDir="raw" mt="65px" ml="555px">
+      <Box display="flex" flexDir="row" mt="65px" justifyContent="center">
         {index === 1 && (
           <Image src={LeftLight} _hover={{ cursor: "not-allowed" }} />
         )}
